@@ -1,0 +1,57 @@
+%heading{
+    font-weight: 400;
+    font-family: $font-secondary;
+    line-height: 1;
+}
+
+.heading-1{
+    @extend %heading;
+    font-size: 8vw;
+       &--white{
+        color: $color-tertiary;
+    }
+
+    &--black{
+        color: $color-secondary;
+    }
+}
+.heading-2{
+    @extend %heading;
+    font-size: 8rem;
+}
+.heading-3{
+    @extend %heading;
+    font-size: 6rem;
+}
+.heading-4{
+    @extend %heading;
+    
+    font-size: 4rem;
+}
+.heading-5{
+    @extend %heading;
+    
+    font-size: 3rem;
+}
+.heading-6{
+    @extend %heading;
+    
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

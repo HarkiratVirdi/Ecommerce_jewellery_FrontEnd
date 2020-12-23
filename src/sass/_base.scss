@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
+
+$font-primary: 'Karla', sans-serif;
+$font-secondary: 'Vollkorn', sans-serif;
+
+$color-primary: #CA9D74;
+
+$color-secondary: #2F2F2F;
+$color-tertiary: #fff;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+::selection{
+    background-color: #ccc0a7;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: 800px) {
+        font-size: 50%;
+    }
+
+       @media only screen and (max-width: 500px) {
+        font-size: 40%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-secondary;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: $color-primary;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
+    grid-template-rows: 15rem;
+}
