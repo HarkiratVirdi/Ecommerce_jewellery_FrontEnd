@@ -51,8 +51,8 @@ const Nav = () => {
           </Link>
         </li>
 
-        <li className="navbar__item ">
-          <Link className="navbar__link cart__link">Cart</Link>
+        <li className="navbar__item cart__link">
+          <Link className="navbar__link ">Cart</Link>
         </li>
       </ul>
     </nav>
