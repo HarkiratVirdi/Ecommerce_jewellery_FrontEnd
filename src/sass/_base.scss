@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap');
+
+
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
 
 $font-primary: 'Karla', sans-serif;
 $font-secondary: 'Vollkorn', sans-serif;
 
-$color-primary: #CA9D74;
-
+$color-primary: rgb(243, 243, 243);
 $color-secondary: #2F2F2F;
-$color-tertiary: #fff;
-
+$color-tertiary: #D29F70;
 
 *,
 *::before,
@@ -44,8 +45,13 @@ body {
     background-color: $color-primary;
 }
 
+a{
+    text-decoration: none;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
     grid-template-rows: 15rem;
+    grid-row-gap: 10vw;
 }

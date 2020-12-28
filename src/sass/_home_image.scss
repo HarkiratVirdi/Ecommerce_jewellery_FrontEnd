@@ -1,0 +1,14 @@
+.Home_image{
+    grid-column: grid-start/grid-end;
+
+    &_img{
+        img{
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    &_content{}
+
+
+}
