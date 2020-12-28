@@ -1,18 +1,19 @@
 import React from "react";
-import ImageFull from "../../images/joeyy_lee_c2chydc76h_JIZjc.jpg";
+import ImageFull from "../../images/fullPageEdited.jpg";
+import ImageHalf from "../../images/joeyy_lee_7tdqxrc8hh_TjQPx.jpg";
 
 const HomeImage = () => {
   return (
-    <div className="Home_image">
+    <section className="Home_image">
       <div className="Home_image_img">
-        <img src={ImageFull} alt="" />
+        <img src={ImageHalf} alt="" />
       </div>
       <div className="Home_image_content">
-        <div className="Home_image_content_heading heading-1">
+        <div className="Home_image_content_heading heading-1 heading-1--white">
           Jewellery That Excites You
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

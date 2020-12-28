@@ -49,9 +49,13 @@ a{
     text-decoration: none;
 }
 
+section{
+    margin-bottom: 10vw;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
     grid-template-rows: 15rem;
-    grid-row-gap: 10vw;
+   
 }

@@ -22,8 +22,7 @@
         margin-top: -1rem;
         grid-column-gap: 10vw;
         align-self: center;
-        img{object-fit: cover;
-        width: 100%;}
+        img{@include imageFluid;}
         
         img:nth-of-type(1){
             grid-column: 1/3;

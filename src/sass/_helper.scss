@@ -1,3 +1,8 @@
+@mixin imageFluid {
+     width: 100%;
+            object-fit: cover;
+}
+
 .mt-s{
     margin-top: 1vw;
 }

@@ -5,12 +5,12 @@ import hero_I_3 from "../../images/joeyy_lee_c2chydc76h_JIZjc.jpg";
 
 export default function Hero() {
   return (
-    <div className="hero">
+    <section className="hero">
       <h1 className="hero__heading">
         <span className="heading-1">Handmade </span>
-        <span className="heading-1 heading-1--white">Jewellery </span>
+        <span className="heading-1 heading-1--gold">Jewellery </span>
         <span className="heading-1">For The </span>
-        <span className="heading-1 heading-1--white">Modern </span>
+        <span className="heading-1 heading-1--gold">Modern </span>
         <span className="heading-1">Women</span>
       </h1>
 
@@ -21,6 +21,6 @@ export default function Hero() {
 
         <img src={hero_I_3} alt="" />
       </div>
-    </div>
+    </section>
   );
 }

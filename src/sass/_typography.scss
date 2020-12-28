@@ -9,11 +9,15 @@
     font-size: 8vw;
     line-height: 1;
        &--white{
-        color: $color-tertiary;
+        color: $color-primary;
     }
 
     &--black{
         color: $color-secondary;
+    }
+
+    &--gold{
+        color: $color-tertiary;
     }
 }
 .heading-2{

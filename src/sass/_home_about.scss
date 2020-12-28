@@ -2,7 +2,7 @@
     display: grid;
     grid-column: grid-start/grid-end;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   
     &_heading{
         grid-column: 2/4;
@@ -19,8 +19,7 @@
 
 
         img{
-            width: 100%;
-            object-fit: cover;
+           @include imageFluid;
         }
 
          img:nth-of-type(1){
