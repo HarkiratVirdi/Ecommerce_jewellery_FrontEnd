@@ -12,7 +12,7 @@ import NecklaceDetail from "../../images/items/necklace-detail.jpg";
 export default function HomeFeatured() {
   return (
     <section className="home_featured">
-      <div className="mb-s home_featured_heading heading-3 heading-3--gold">
+      <div className="mb-m home_featured_heading heading-3 heading-3--gold">
         Featured
       </div>
       <div className="home_featured_items">
