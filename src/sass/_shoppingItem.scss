@@ -1,0 +1,19 @@
+.shopping_item{
+    display: inline-block;
+
+    &_image{
+        // width: 25vw;
+    }
+
+    &_content{
+
+        &_name{
+            font-weight: 800;
+        }
+
+        &_price{
+            opacity: 0.8;
+        }
+    }
+
+}

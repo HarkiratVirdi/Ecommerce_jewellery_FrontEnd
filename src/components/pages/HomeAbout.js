@@ -6,10 +6,10 @@ import ShowBracelet2 from "../../images/showingbracelet2_com_c8tTp.jpg";
 export default function Home_about() {
   return (
     <section className="H_about">
-      <div className="H_about_heading heading-5">
+      <div className="H_about_heading heading-4">
         Tira is a Handmade jewellery that reflects elegance with the focus on
-        the highest quantily of material used. All jewellery crafted in toronto,
-        canada.
+        the highest quantily of material used. All jewellery crafted in Toronto,
+        Canada.
       </div>
 
       <div className="H_about_images">

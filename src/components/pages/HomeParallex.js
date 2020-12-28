@@ -7,9 +7,15 @@ export default function HomeParallex() {
   return (
     <section className="home_parallex">
       <div className="home_parallex_images">
-        <img src={ImageLeft} alt="" />
-        <img src={ImageCenter} alt="" />
-        <img src={ImageRight} alt="" />
+        <figure className="home_parallex_images_figure">
+          <img src={ImageLeft} alt="" />
+        </figure>
+        <figure className="home_parallex_images_figure">
+          <img src={ImageCenter} alt="" />
+        </figure>
+        <figure className="home_parallex_images_figure">
+          <img src={ImageRight} alt="" />
+        </figure>
       </div>
       <div className="home_parallex_content">
         <div className="heading-1">Each Piece Tells a Story</div>

@@ -1,0 +1,40 @@
+.sign_up{
+    grid-column: grid-start/grid-end;
+    background-color: $color-tertiary;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    justify-items: center;
+    padding: 7vw;
+    align-items: center;
+
+    &_heading{
+        grid-column: 2/6;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    &_form{
+        grid-column: 2/6;
+        grid-row: 3;
+        
+
+        input{
+            height: 3.5vw;
+            width: 24vw;
+            color: $color-secondary;
+            background-color: #fff;
+            padding: 0 1vw;
+            outline: 0;
+            margin-right: 1vw;
+            // border: .1vw solid black;
+            font-size: 1vw;
+            border: none;
+        }
+    }
+
+    &_btn{
+        grid-column: 7;
+        grid-row: 3;
+    }
+
+}

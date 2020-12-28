@@ -1,0 +1,18 @@
+.home_carousel{
+    grid-column: grid-start/grid-end;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+&_big{grid-column: 2/5;
+background-color: $color-secondary;
+    grid-row: 2/6;
+}
+
+&_small{grid-column: 5/7;
+background-color: $color-tertiary;
+    grid-row: 3/5;
+}
+
+
+}
+

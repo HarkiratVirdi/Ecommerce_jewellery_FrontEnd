@@ -12,6 +12,9 @@ $color-primary: rgb(243, 243, 243);
 $color-secondary: #2F2F2F;
 $color-tertiary: #D29F70;
 
+$tablet-breakpoint: 900px;
+$mobile-breakpoint: 600px;
+
 *,
 *::before,
 *::after {
@@ -27,14 +30,6 @@ $color-tertiary: #D29F70;
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-
-    @media only screen and (max-width: 800px) {
-        font-size: 50%;
-    }
-
-       @media only screen and (max-width: 500px) {
-        font-size: 40%;
-    }
 }
 
 body {
@@ -52,6 +47,9 @@ a{
 section{
     margin-bottom: 10vw;
 }
+
+img{width: 100%;
+object-fit: cover;}
 
 .grid-container{
     display: grid;
