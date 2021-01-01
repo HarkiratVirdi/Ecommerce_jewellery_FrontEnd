@@ -23,6 +23,9 @@ export default function HomeItems() {
 
   return (
     <section className="home_items">
+      <div className="home_items__heading heading-3 heading-3--gold mb-m">
+        Categories
+      </div>
       <div className="home_items__headings">
         <HeadingHover>Bracelets</HeadingHover>
         <HeadingHover>Bangles</HeadingHover>

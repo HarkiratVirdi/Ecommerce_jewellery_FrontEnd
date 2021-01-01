@@ -2,8 +2,13 @@
   display: grid;
   grid-column: grid-start / grid-end;
   justify-items: center;
+
   grid-row-gap: 1vw;
   grid-template-columns: repeat(7, 1fr);
+
+  &__heading {
+    grid-column: 1/-1;
+  }
 
   &__headings {
     display: grid;
