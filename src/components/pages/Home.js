@@ -3,9 +3,9 @@ import HomeHero from "./HomeHero";
 import HomeAbout from "./HomeAbout";
 import HomeImage from "./HomeImage";
 import HomeParallex from "./HomeParallex";
-import HomeCarousel from "./HomeCarousel";
 import HomeFeatured from "./HomeFeatured";
 import SignUp from "../SignUp";
+import HomeItems from "./HomeItems";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <HomeHero />
       <HomeAbout />
       <HomeImage />
+      <HomeItems />
       <HomeParallex />
       <HomeFeatured />
       <SignUp />

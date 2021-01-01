@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../images/tira_logo.png";
 
 const Nav = () => {
   const [click, setclick] = useState(false);
@@ -15,11 +16,6 @@ const Nav = () => {
             className={click ? "navbar__icon__cross" : "navbar__icon__menu"}
           ></div>
         </div>
-        <li className="navbar__item">
-          <Link className="navbar__link" to="/">
-            Home
-          </Link>
-        </li>
 
         <li className="navbar__item">
           <Link className="navbar__link" to="/shop">
@@ -32,22 +28,28 @@ const Nav = () => {
             About
           </Link>
         </li>
-      </ul>
 
-      <Link to="/" className="navbar__logo">
-        TIRA
-      </Link>
-
-      <ul className={click ? "navbar__menu" : "navbar__menu--hidden"}>
         <li className="navbar__item">
           <Link className="navbar__link" to="/contact">
             Contact
           </Link>
         </li>
+      </ul>
 
+      <Link to="/" className="navbar__logo">
+        <img src={Logo} alt="" />
+      </Link>
+
+      <ul className={click ? "navbar__menu" : "navbar__menu--hidden"}>
         <li className="navbar__item">
           <Link className="navbar__link" to="/fr">
             FR
+          </Link>
+        </li>
+
+        <li className="navbar__item">
+          <Link className="navbar__link" to="/login">
+            Login/Register
           </Link>
         </li>
 

@@ -1,123 +1,159 @@
-.btn{
+.btn {
   // display: flex;
   // justify-content: center;
   height: 3.5vw;
   // align-items: center;
-  font-size: 0.8vw;
+  font-size: 1vw;
   padding: 1vw 4vw;
-  letter-spacing: .2vw;
-  font-weight: 600;
+  letter-spacing: 0.2vw;
+  font-weight: 400;
   // align-self: center;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-// border: 2px solid $color-secondary;  
+  // border: 2px solid $color-secondary;
   background: $color-secondary;
-  transition: all .35s; 
+  transition: all 0.35s;
   position: relative;
-   
+  cursor: pointer;
+  // &-block{
+
+  // }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $color-tertiary;
+    background: $color-tertiary;
+    transition: all 0.35s;
+  }
+
+  &:hover {
+    background: $color-secondary;
+    color: $color-tertiary;
+  }
+
+  &:hover:after {
+    height: 0%;
+  }
+
+  & label {
+    z-index: 999;
+    position: relative;
+  }
+
+  @media only screen and (max-width: $tablet-breakpoint) {
+  }
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    height: 13.5vw;
+    // align-items: center;
+    font-size: 3.5vw;
+    width: 90vw;
+    letter-spacing: 0.2vw;
+    font-weight: 200;
+    // align-self: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    // border: 2px solid $color-secondary;
+    background: $color-secondary;
+    transition: all 0.35s;
+    position: relative;
 
     // &-block{
-
-    // }
-
-
-&:after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: $color-tertiary;
-  background: $color-tertiary;
-  transition: all .35s;
+  }
 }
 
-&:hover{
-  background: $color-secondary;
-  color: $color-tertiary;
-}
-
-&:hover:after{
-  height: 0%;
-}
-
-& label{
- z-index: 999;
-    position: relative;
-}
-
-}
-
-
-.btn--white{
+.btn--white {
   // display: flex;
   // justify-content: center;
-  height: 3.5vw;
+
   // align-items: center;
-  font-size: 0.8vw;
-  padding: 1vw 4vw;
-  letter-spacing: .2vw;
-  font-weight: 600;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
+  font-weight: 200;
   // align-self: center;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-// border: 2px solid $color-secondary;  
+  font-style: $font-secondary;
+  // border: 2px solid $color-secondary;
   background: $color-secondary;
-  transition: all .35s; 
+  transition: all 0.35s;
   position: relative;
-   
 
-    // &-block{
+  // &-block{
 
-    // }
+  // }
 
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $color-primary;
+    background: $color-primary;
+    transition: all 0.35s;
+  }
 
-&:after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: $color-primary;
-  background: $color-primary;
-  transition: all .35s;
-}
+  &:hover {
+    background: $color-secondary;
+    color: $color-primary;
+  }
 
-&:hover{
-  background: $color-secondary;
-  color: $color-primary;
-}
+  &:hover:after {
+    height: 0%;
+  }
 
-&:hover:after{
-  height: 0%;
-}
-
-& label{
- z-index: 999;
+  & label {
+    z-index: 999;
     position: relative;
+  }
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    height: 13.5vw;
+    font-size: 3.5vw;
+    width: 90vw;
+    letter-spacing: 0.2vw;
+    font-weight: 200;
+  }
 }
 
-}
-
-
-
-.form_field{
-
-  &_email{
+.form_field {
+  &_email {
     background-color: transparent;
     border: 1px solid $color-primary;
     height: 3vw;
     padding: 0 1vw;
-    color:$color-primary;
+    color: $color-primary;
     outline: none;
-    
   }
 
-  &_label{
+  &_label {
+  }
+}
 
+.heading_hover {
+  display: inline-block;
+  cursor: pointer;
+
+  .heading-3 {
+    a {
+      -webkit-text-stroke: 1px $color-tertiary;
+      color: transparent;
+      transition: all 0.4s;
+      font-family: $font-tertiary;
+    }
+
+    a:hover {
+      color: $color-tertiary;
+    }
   }
 }

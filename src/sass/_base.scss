@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
-
-$font-primary: 'Karla', sans-serif;
-$font-secondary: 'Vollkorn', sans-serif;
+$font-primary: "Karla", sans-serif;
+$font-secondary: "Vollkorn", sans-serif;
+$font-tertiary: "Playfair Display", sans-serif;
 
 $color-primary: rgb(243, 243, 243);
-$color-secondary: #2F2F2F;
-$color-tertiary: #D29F70;
+$color-secondary: #2f2f2f;
+$color-tertiary: #d29f70;
 
 $tablet-breakpoint: 900px;
 $mobile-breakpoint: 600px;
@@ -18,42 +18,63 @@ $mobile-breakpoint: 600px;
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-::selection{
-    background-color: #ccc0a7;
+::selection {
+  background-color: #c6bca7;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  //   @media only screen and (max-width: $tablet-breakpoint) {
+  //     font-size: 50%;
+  //   }
+
+  //   @media only screen and (max-width: $mobile-breakpoint) {
+  //     font-size: 40%;
+  //   }
 }
 
 body {
-    font-family: $font-primary;
-    color: $color-secondary;
-    font-weight: 300;
-    line-height: 1.6;
-    background-color: $color-primary;
+  font-family: $font-primary;
+  color: $color-secondary;
+  font-weight: 300;
+  overflow-x: hidden;
+  line-height: 1.6;
+  background-color: $color-primary;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-section{
-    margin-bottom: 10vw;
+section {
+  margin-bottom: 10vw;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: 20vw;
+  }
 }
 
-img{width: 100%;
-object-fit: cover;}
+img {
+  width: 100%;
+  object-fit: cover;
+}
 
-.grid-container{
-    display: grid;
-    grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
+.grid-container {
+  display: grid;
+  grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
+  grid-template-rows: 20rem;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr;
     grid-template-rows: 15rem;
-   
+  }
 }
