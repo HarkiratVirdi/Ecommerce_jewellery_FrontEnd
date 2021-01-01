@@ -11,7 +11,7 @@ import earrings2 from "../../images/comp_items/guardian-angel-earrings.jpg";
 import earrings3 from "../../images/comp_items/marble-stud-earrings.jpg";
 import necklace1 from "../../images/comp_items/gold_bird_necklace.jpg";
 import necklace2 from "../../images/comp_items/silver_origami_neckl_wsiVC.jpg";
-import necklace3 from "../../images/comp_items/bird-necklace.jpg";
+import necklace3 from "../../images/comp_items/gold-layered-necklace.jpg";
 
 export default function HomeItems() {
   const images = {
