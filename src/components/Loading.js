@@ -14,7 +14,7 @@ const Loading = () => {
     // loadingDone = true;
     let tl = gsap.timeline();
     tl.to(bigLogo, { duration: 2, color: "#fff" });
-    tl.to(overlay, { duration: 2, y: "-100vh", ease: "expo" });
+    tl.to(overlay, { duration: 1.5, y: "-100vh", ease: "expo" });
     tl.to(overlay, { display: "none" });
     tl.to(loadingScreen, { display: "none" });
   }, []);

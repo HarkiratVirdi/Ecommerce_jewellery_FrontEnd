@@ -61,7 +61,7 @@
       font-weight: 800;
       position: relative;
       text-transform: uppercase;
-      letter-spacing: 0.3rem;
+      letter-spacing: 0.1rem;
       font-family: $font-primary;
 
       &:after {
@@ -110,7 +110,7 @@
     margin-left: 8vw;
     // margin-top: 2vw;
     position: relative;
-    width: 4rem;
+
     flex-direction: column;
     align-items: center;
     align-self: center;
