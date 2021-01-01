@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Loading from "../Loading";
 import HomeHero from "./HomeHero";
 import HomeAbout from "./HomeAbout";
 import HomeImage from "./HomeImage";
