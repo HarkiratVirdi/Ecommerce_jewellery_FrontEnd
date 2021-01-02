@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Tira_Redesigned/static/css/main.6dba9e83.chunk.css",
-    "main.js": "/Tira_Redesigned/static/js/main.93a3f55f.chunk.js",
-    "main.js.map": "/Tira_Redesigned/static/js/main.93a3f55f.chunk.js.map",
+    "main.js": "/Tira_Redesigned/static/js/main.9bd74c47.chunk.js",
+    "main.js.map": "/Tira_Redesigned/static/js/main.9bd74c47.chunk.js.map",
     "runtime-main.js": "/Tira_Redesigned/static/js/runtime-main.22b3bcfb.js",
     "runtime-main.js.map": "/Tira_Redesigned/static/js/runtime-main.22b3bcfb.js.map",
     "static/js/2.a590a4c6.chunk.js": "/Tira_Redesigned/static/js/2.a590a4c6.chunk.js",
@@ -44,6 +44,6 @@
     "static/js/runtime-main.22b3bcfb.js",
     "static/js/2.a590a4c6.chunk.js",
     "static/css/main.6dba9e83.chunk.css",
-    "static/js/main.93a3f55f.chunk.js"
+    "static/js/main.9bd74c47.chunk.js"
   ]
 }
