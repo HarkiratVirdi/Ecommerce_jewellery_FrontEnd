@@ -1,0 +1,14 @@
+.initialTransition {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    background-color: #333;
+  }
+}

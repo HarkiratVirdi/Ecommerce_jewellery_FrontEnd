@@ -13,7 +13,7 @@ export default function SignUp({ image }) {
         <div className="sign_up_heading heading-3 heading-3--white">
           Sign Up for our newsletter to receive offers.
         </div>
-        <form action="" className="sign_up_form">
+        <form action="" className=" mt-m sign_up_form">
           <input type="email" placeholder="Email Address" />
           <Button placement="sign_up_btn" style="btn--white">
             Sign Up

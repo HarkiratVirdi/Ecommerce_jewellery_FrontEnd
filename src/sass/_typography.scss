@@ -21,6 +21,7 @@
   @extend %heading;
   font-size: 8vw;
   line-height: 1;
+  // white-space: nowrap;
   @include color-text;
 
   @media only screen and (max-width: $mobile-breakpoint) {
@@ -29,13 +30,14 @@
 }
 .heading-2 {
   @extend %heading;
-  font-size: 8vw;
+  font-size: 7.6vw;
   text-transform: capitalize;
   @include color-text;
 }
 .heading-3 {
   @extend %heading;
   font-size: 4vw;
+  line-height: 1;
 
   @media only screen and (max-width: $mobile-breakpoint) {
     font-size: 6vw;

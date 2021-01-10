@@ -5,6 +5,8 @@ const Loading = () => {
   let bigLogo = useRef(null);
   let overlay = useRef(null);
   let loadingScreen = useRef(null);
+
+  const elements = [".hero_image", "."];
   //   let loadingDone = false;
   useEffect(() => {
     // const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
@@ -12,9 +14,10 @@ const Loading = () => {
     // tl.to(slider.current, { y: "-100%", duration: 1.4, delay: 0.5 });
     // tl.to(loading.current, { y: "-100%", duration: 0.8 }, "-=1.1");
     // loadingDone = true;
+    //--------------------loading-------
     let tl = gsap.timeline();
     tl.to(bigLogo, { duration: 2, color: "#fff" });
-    tl.to(overlay, { duration: 1.5, y: "-100vh", ease: "expo" });
+    tl.to(overlay, { duration: 1.6, y: "-100vh", ease: "power3.inOut" });
     tl.to(overlay, { display: "none" });
     tl.to(loadingScreen, { display: "none" });
   }, []);

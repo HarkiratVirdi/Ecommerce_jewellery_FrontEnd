@@ -1,0 +1,7 @@
+.shop {
+  display: grid;
+  grid-column: col-start 2 / col-end 7;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-row-gap: 4vw;
+  grid-column-gap: 4vw;
+}

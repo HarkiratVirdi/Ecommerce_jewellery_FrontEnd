@@ -1,24 +1,18 @@
 .btn {
-  // display: flex;
-  // justify-content: center;
   height: 3.5vw;
-  // align-items: center;
   font-size: 1vw;
+  outline: 0;
   padding: 1vw 4vw;
+  font-family: $font-primary;
   letter-spacing: 0.2vw;
   font-weight: 400;
-  // align-self: center;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-  // border: 2px solid $color-secondary;
   background: $color-secondary;
   transition: all 0.35s;
   position: relative;
   cursor: pointer;
-  // &-block{
-
-  // }
 
   &:after {
     content: "";
@@ -50,79 +44,37 @@
   }
 
   @media only screen and (max-width: $mobile-breakpoint) {
-    height: 13.5vw;
-    // align-items: center;
-    font-size: 3.5vw;
-    width: 90vw;
-    letter-spacing: 0.2vw;
-    font-weight: 200;
-    // align-self: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    // border: 2px solid $color-secondary;
-    background: $color-secondary;
-    transition: all 0.35s;
-    position: relative;
-
-    // &-block{
+    height: 13vw;
+    font-size: 3vw;
+    width: 95vw;
   }
 }
 
 .btn--white {
-  // display: flex;
-  // justify-content: center;
-
-  // align-items: center;
-  font-size: 1vw;
-  letter-spacing: 0.2vw;
-  font-weight: 200;
-  // align-self: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: none;
-  font-style: $font-secondary;
-  // border: 2px solid $color-secondary;
-  background: $color-secondary;
-  transition: all 0.35s;
-  position: relative;
-
-  // &-block{
-
-  // }
-
+  padding: 0.5vw 1.5vw;
   &:after {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
     color: $color-primary;
     background: $color-primary;
-    transition: all 0.35s;
   }
 
   &:hover {
     background: $color-secondary;
     color: $color-primary;
   }
+}
 
-  &:hover:after {
-    height: 0%;
+.btn--gold {
+  &:after {
+    content: "";
+    color: $color-tertiary;
+    background: $color-primary;
   }
 
-  & label {
-    z-index: 2;
-    position: relative;
-  }
-
-  @media only screen and (max-width: $mobile-breakpoint) {
-    height: 13.5vw;
-    font-size: 3.5vw;
-    width: 90vw;
-    letter-spacing: 0.2vw;
-    font-weight: 200;
+  &:hover {
+    background: $color-tertiary;
+    color: $color-primary;
   }
 }
 

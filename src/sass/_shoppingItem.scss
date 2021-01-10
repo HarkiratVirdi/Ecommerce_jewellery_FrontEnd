@@ -1,19 +1,21 @@
-.shopping_item{
-    display: inline-block;
+.shopping_item {
+  display: inline-block;
 
-    &_image{
-        // width: 25vw;
+  a {
+    color: $color-secondary;
+  }
+
+  &_image {
+    // width: 25vw;
+  }
+
+  &_content {
+    &_name {
+      font-weight: 800;
     }
 
-    &_content{
-
-        &_name{
-            font-weight: 800;
-        }
-
-        &_price{
-            opacity: 0.8;
-        }
+    &_price {
+      opacity: 0.8;
     }
-
+  }
 }

@@ -1,0 +1,13 @@
+.cart {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: inset(0 0 100% 0);
+  position: fixed;
+  grid-column: grid-start / grid-end;
+  z-index: 999;
+  background-color: #eee;
+}

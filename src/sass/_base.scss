@@ -8,7 +8,7 @@ $font-primary: "Karla", sans-serif;
 $font-secondary: "Vollkorn", sans-serif;
 $font-tertiary: "Playfair Display", sans-serif;
 
-$color-primary: rgb(243, 243, 243);
+$color-primary: #fff;
 $color-secondary: #2f2f2f;
 $color-tertiary: #d29f70;
 
@@ -31,13 +31,13 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
-  //   @media only screen and (max-width: $tablet-breakpoint) {
-  //     font-size: 50%;
-  //   }
+  @media only screen and (max-width: $tablet-breakpoint) {
+    font-size: 50%;
+  }
 
-  //   @media only screen and (max-width: $mobile-breakpoint) {
-  //     font-size: 40%;
-  //   }
+  // @media only screen and (max-width: $mobile-breakpoint) {
+  //   font-size: 40%;
+  // }
 }
 
 body {
@@ -55,11 +55,21 @@ a {
   text-decoration: none;
 }
 
+.homeScene {
+  grid-column: 1/-1;
+}
+
 section {
-  margin-bottom: 10vw;
+  margin-bottom: 10vw !important;
 
   @media only screen and (max-width: $mobile-breakpoint) {
-    margin-bottom: 20vw;
+    margin-bottom: 20vw !important;
+  }
+}
+
+.m-hide {
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: none;
   }
 }
 
@@ -71,10 +81,9 @@ img {
 .grid-container {
   display: grid;
   grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
-  grid-template-rows: 20rem;
+  grid-template-rows: 15rem;
 
   @media only screen and (max-width: $mobile-breakpoint) {
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem;
   }
 }
