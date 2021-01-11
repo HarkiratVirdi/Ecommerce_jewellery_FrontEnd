@@ -3,6 +3,7 @@
   grid-column: col-start 2 / col-end 7;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
+  grid-row: 2;
   grid-column-gap: 2vw;
 
   @media only screen and (max-width: $mobile-breakpoint) {

@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vw;
+  grid-row: 4;
 
   @media only screen and (max-width: $mobile-breakpoint) {
     // grid-template-columns: 1fr;

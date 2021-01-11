@@ -7,38 +7,34 @@
   letter-spacing: 0.2vw;
   font-weight: 400;
   text-decoration: none;
+  color: $color-secondary;
+  background: $color-tertiary;
   text-transform: uppercase;
   border: none;
-  background: $color-secondary;
   transition: all 0.35s;
-  position: relative;
+  // position: relative;
   cursor: pointer;
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: $color-tertiary;
-    background: $color-tertiary;
-    transition: all 0.35s;
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   color: $color-tertiary;
+  //   background: $color-tertiary;
+  //   transition: all 0.35s;
+  // }
 
   &:hover {
     background: $color-secondary;
     color: $color-tertiary;
   }
 
-  &:hover:after {
-    height: 0%;
-  }
-
-  & label {
-    z-index: 2;
-    position: relative;
-  }
+  // &:hover:after {
+  //   height: 0%;
+  // }
 
   @media only screen and (max-width: $tablet-breakpoint) {
   }
@@ -52,12 +48,14 @@
 
 .btn--white {
   padding: 0.5vw 1.5vw;
-  &:after {
-    content: "";
+  color: $color-secondary;
+  background: $color-primary;
+  // &:after {
+  //   content: "";
 
-    color: $color-primary;
-    background: $color-primary;
-  }
+  //   color: $color-primary;
+  //   background: $color-primary;
+  // }
 
   &:hover {
     background: $color-secondary;
@@ -66,11 +64,13 @@
 }
 
 .btn--gold {
-  &:after {
-    content: "";
-    color: $color-tertiary;
-    background: $color-primary;
-  }
+  color: $color-secondary;
+  background: $color-tertiary;
+  // &:after {
+  //   content: "";
+  //   color: $color-tertiary;
+  //   background: $color-primary;
+  // }
 
   &:hover {
     background: $color-tertiary;

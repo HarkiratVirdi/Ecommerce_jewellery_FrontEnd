@@ -18,7 +18,7 @@ export default function HomeParallex() {
         </figure>
       </div>
       <div className="home_parallex_content">
-        <div className="heading-2 heading-2--white">
+        <div className="heading-2 heading-2--black">
           Each Piece Tells a Story
         </div>
       </div>

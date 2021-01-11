@@ -26,7 +26,7 @@ export default function Hero() {
   const imageT = {
     duration: 1,
     ease: "easeInOut",
-    delayChildren: 0.4,
+    delayChildren: 2,
   };
 
   const imageA = {
@@ -37,25 +37,20 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <motion.h1
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={duration}
-        variants={transition}
-        className="hero__heading"
-      >
+      <h1 className="hero__heading">
         <span className="heading-1">Handmade </span>
         <span className="heading-1 heading-1--gold">Jewellery </span>
         <span className="heading-1">For The </span>
         <span className="heading-1 heading-1--gold">Modern </span>
         <span className="heading-1">Women</span>
-      </motion.h1>
+      </h1>
 
       <motion.div transition={imageT} className="hero__images">
         <motion.img
           animate={imageA}
           initial={{ scale: 1 }}
+          exit={{ scale: 0.9 }}
+          transition={imageT}
           className="hero_image m-hide"
           src={hero_I_1}
           alt=""
@@ -64,6 +59,8 @@ export default function Hero() {
         <motion.img
           animate={imageA}
           initial={{ scale: 1 }}
+          exit={{ scale: 0.9 }}
+          transition={imageT}
           className="hero_image"
           src={hero_I_2}
           alt=""
@@ -72,6 +69,8 @@ export default function Hero() {
         <motion.img
           animate={imageA}
           initial={{ scale: 1 }}
+          exit={{ scale: 0.9 }}
+          transition={imageT}
           className="hero_image m-hide"
           src={hero_I_3}
           alt=""

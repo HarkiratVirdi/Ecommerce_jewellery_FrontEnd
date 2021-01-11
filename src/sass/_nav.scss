@@ -2,6 +2,9 @@
   grid-row: 1;
   grid-column: grid-start/grid-end;
   display: grid;
+  position: fixed;
+  top: 2rem;
+  width: 100%;
 
   @media only screen and (max-width: 900px) {
     grid-column: 1/-1;
@@ -22,7 +25,7 @@
     align-content: center;
 
     @media only screen and (max-width: 900px) {
-      justify-content: start;
+      // justify-content: start;
       justify-items: start;
     }
   }
@@ -32,6 +35,11 @@
     grid-column: 3;
     justify-content: space-around;
     justify-items: center;
+
+    @media only screen and (max-width: 900px) {
+      justify-content: end;
+      margin-right: 2rem;
+    }
   }
 
   &__menu {
@@ -39,15 +47,23 @@
     }
   }
 
-  &__item {
+  &__list &__item:not(:first-child) {
     // padding: 1.5rem 3rem;
+    transition: 0.5s all;
+    @media only screen and (max-width: 900px) {
+      display: none;
+    }
+  }
 
+  &__list--2 &__item:not(:last-child) {
     @media only screen and (max-width: 900px) {
       display: none;
     }
   }
 
   .cart__link {
+    opacity: 1 !important;
+    visibility: visible !important;
     @media only screen and (max-width: 900px) {
       display: inline-block;
       grid-column: 1/-1;
@@ -56,7 +72,7 @@
 
   &__link {
     color: $color-secondary;
-    transition: all 0.2s;
+    transition: all 0.4s;
     padding: 1.5rem 0;
 
     &:link {
@@ -96,6 +112,7 @@
     grid-row: 1;
     align-self: center;
     justify-self: center;
+    transition: 0.5s all;
     color: $color-secondary;
 
     @media only screen and (max-width: $tablet-breakpoint) {
@@ -108,12 +125,15 @@
   }
 
   &__icon {
-    grid-column: 1/-1;
+    // grid-column: 1/-1;
     grid-row: 1/2;
     height: 2rem;
     width: 3rem;
-    display: none;
-    margin-left: 8vw;
+    // visibility: hidden;
+    // opacity: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+
     cursor: pointer;
     outline: 0;
     flex-direction: column;
@@ -131,18 +151,20 @@
       position: absolute;
       height: 1px;
       top: 2px;
+      left: 0;
       background-color: #000;
       display: block;
     }
 
     span:nth-child(1) {
-      margin: 1.5vw 0;
+      margin: 1rem 0;
+      left: 0;
       position: absolute;
     }
 
     span:nth-child(2) {
       bottom: 0;
-      position: relative;
+      left: 0;
     }
 
     &__menu {

@@ -6,6 +6,27 @@
 .mt-s {
   margin-top: 1vw;
 }
+
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.s-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.s-show {
+  visibility: visible;
+  opacity: 1;
+}
 .mt-m {
   margin-top: 2vw;
 }

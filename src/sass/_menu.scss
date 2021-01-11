@@ -1,33 +1,45 @@
 .menu {
+  // display: flex;
   height: 100vh;
   width: 100%;
   position: fixed;
-
   top: 0;
   bottom: 0;
+  clip-path: inset(0 0 100% 0);
   left: 0;
   right: 0;
-  background-color: #fff;
-  display: flex;
-  z-index: 999;
+  z-index: 1000;
+  // z-index: -3;
+  transition: 0.8s all;
 
   &__image {
     position: relative;
     width: 40%;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    transition: 0.6s all;
     height: 100%;
 
     img {
       width: 100%;
       height: 100%;
       position: absolute;
+      z-index: 1;
       object-fit: cover;
+      transform: scale(1.1);
       transition: 0.5s all;
     }
   }
 
   &__content {
     width: 60%;
+    transition-timing-function: ease-in-out;
     height: 100%;
+    position: fixed;
+    right: 0;
+    background-color: #eee;
+    transition: 1s all;
 
     @media only screen and (max-width: $mobile-breakpoint) {
       width: 100%;
@@ -35,12 +47,45 @@
     a {
       color: #333;
     }
+
+    a:hover {
+      color: $color-tertiary;
+      font-style: italic;
+    }
+  }
+
+  &__link {
+    margin: 2vw;
+  }
+
+  &__close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 3rem;
   }
 
   &__list {
     height: 100%;
     flex-direction: column;
     display: flex !important;
-    justify-content: space-around !important;
+    justify-content: center !important;
   }
+}
+
+.open {
+  clip-path: inset(0 0 0% 0);
+}
+
+.close {
+  clip-path: inset(0 0 100% 0);
+}
+
+.isActive {
+  z-index: 3;
+  transform: 0.5s all;
+}
+
+.z-1000 {
+  z-index: 1000 !important;
 }
