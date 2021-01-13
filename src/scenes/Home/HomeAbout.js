@@ -20,7 +20,7 @@ export default function Home_about() {
   }, [animation, inView]);
 
   return (
-    <section className="H_about">
+    <section className="H_about m-Container">
       <motion.div
         ref={contentRef}
         animate={animation}

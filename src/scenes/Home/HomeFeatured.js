@@ -21,7 +21,7 @@ export default function HomeFeatured() {
   // console.log(featured);
 
   return (
-    <section className="home_featured">
+    <section className="home_featured m-Container">
       <div className="mb-m home_featured_heading heading-3 heading-3--gold">
         Featured
       </div>

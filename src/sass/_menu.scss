@@ -14,9 +14,9 @@
 
   &__image {
     position: relative;
-    width: 40%;
+    width: 50%;
     transition-timing-function: ease-in-out;
-    overflow: hidden;
+    // overflow: hidden;
     position: fixed;
     transition: 0.6s all;
     height: 100%;
@@ -33,7 +33,7 @@
   }
 
   &__content {
-    width: 60%;
+    width: 50%;
     transition-timing-function: ease-in-out;
     height: 100%;
     position: fixed;

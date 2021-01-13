@@ -7,9 +7,9 @@ const Button = ({ children, linkTo, onClick, style, placement }) => {
 
   return (
     <Link to={linkTo} className={checkPlacement}>
-      <div className={`btn ${checkButtonStyle}`} onClick={onClick}>
+      <button className={`btn ${checkButtonStyle}`} onClick={onClick}>
         {children}
-      </div>
+      </button>
     </Link>
   );
 };

@@ -81,9 +81,14 @@ img {
 .grid-container {
   display: grid;
   grid-template-columns: [grid-start] repeat(8, [col-start] 1fr [col-end]) [grid-end];
-  grid-template-rows: 15rem;
+  grid-template-rows: 11rem;
 
   @media only screen and (max-width: $mobile-breakpoint) {
     grid-template-columns: 1fr;
   }
+}
+
+.m-Container {
+  width: 95%;
+  margin: auto;
 }

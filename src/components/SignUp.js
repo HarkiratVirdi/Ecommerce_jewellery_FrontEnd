@@ -9,7 +9,7 @@ export default function SignUp({ image }) {
       <div className="sign_up__image">
         <img src={checkImage} alt="Girl wearing Jewellery" />
       </div>
-      <div className="sign_up__content">
+      <div className="sign_up__content m-Container">
         <div className="sign_up_heading heading-3 heading-3--white">
           Sign Up for our newsletter to receive offers.
         </div>

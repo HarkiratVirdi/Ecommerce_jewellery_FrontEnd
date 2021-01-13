@@ -31,13 +31,13 @@ function App() {
       ) : (
         <div className="grid-container">
           <Nav />
-          <AnimatePresence exitBeforeEnter>
-            <Switch location={location} key={location.pathname}>
-              <Route exact component={Home} path="/"></Route>
-              <Route path="/shop" exact component={Shop}></Route>
-              <Route exact path="/products/:id" component={ItemPage}></Route>
-            </Switch>
-          </AnimatePresence>
+          {/* <AnimatePresence> */}
+          <Switch location={location} key={location.pathname}>
+            <Route exact component={Home} path="/"></Route>
+            <Route path="/shop" exact component={Shop}></Route>
+            <Route exact path="/products/:id" component={ItemPage}></Route>
+          </Switch>
+          {/* </AnimatePresence> */}
         </div>
       )}
     </>

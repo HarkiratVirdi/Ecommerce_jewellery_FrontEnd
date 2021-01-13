@@ -16,9 +16,9 @@ const Menu = ({ click, handleClick }) => {
     <div className={`menu ${click ? "open" : "close"}`}>
       <div className={`menu__image m-hide ${click ? "open" : "close"}`}>
         <img src={blackGirl} alt="" />
-        <img src={image2} alt="" />
+        {/* <img src={image2} alt="" />
         <img src={image3} alt="" />
-        <img src={image4} alt="" />
+        <img src={image4} alt="" /> */}
       </div>
 
       <div className={`menu__content ${click ? "open" : "close"}`}>

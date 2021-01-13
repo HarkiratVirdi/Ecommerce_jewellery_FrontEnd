@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
+import { listProductDetails } from "../actions/productActions";
+import { useDispatch, useSelector } from "react-redux";
 
 const ItemPage = ({ match }) => {
-  const [product, setproduct] = useState([]);
+  const dispatch = useDispatch();
+  const productDetails = useSelector((state) => state.productDetails);
+
+  const { loading, error, product } = productDetails;
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get(`/api/products/${match.params.id}`);
-      setproduct(data);
-    };
-
-    fetchProducts();
+    dispatch(listProductDetails(match.params.id));
   }, []);
 
   return (
