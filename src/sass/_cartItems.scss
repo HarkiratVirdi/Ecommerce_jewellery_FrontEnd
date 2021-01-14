@@ -1,2 +1,48 @@
 .cartitems {
+  display: flex;
+  flex-direction: column;
+  //   @media only screen and (max-width: $mobile-breakpoint) {
+  //     padding: 0 0 4rem 0;
+  //   }
+
+  &__content {
+    width: 100%;
+    display: flex;
+  }
+
+  &__name {
+    width: 75%;
+    flex-wrap: wrap;
+  }
+
+  &__qty {
+    width: 50%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__dec,
+  &__qty--number,
+  &__inc {
+    cursor: pointer;
+    width: 3rem;
+    justify-content: center;
+    display: flex;
+    border: 1px solid $color-primary;
+    text-align: center;
+    height: 3rem;
+    outline: none;
+    border: none;
+    user-select: none;
+    font-family: $font-tertiary;
+    align-items: center;
+    background-color: $color-tertiary;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      // height: 3.5rem;
+      width: 6.5rem;
+    }
+  }
 }

@@ -9,7 +9,6 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
   let cart_checkout = useRef(null);
   let cart = useRef(null);
 
-  const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
 
   const { cartItems } = cartState;
