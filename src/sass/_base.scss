@@ -30,6 +30,7 @@ $mobile-breakpoint: 600px;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  min-height: -webkit-fill-available;
 
   @media only screen and (max-width: $tablet-breakpoint) {
     font-size: 50%;
@@ -47,6 +48,8 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   background-color: $color-primary;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 
   -webkit-tap-highlight-color: transparent;
 }
@@ -67,12 +70,6 @@ section {
   }
 }
 
-.m-hide {
-  @media only screen and (max-width: $mobile-breakpoint) {
-    display: none;
-  }
-}
-
 img {
   width: 100%;
   object-fit: cover;
@@ -86,9 +83,4 @@ img {
   @media only screen and (max-width: $mobile-breakpoint) {
     grid-template-columns: 1fr;
   }
-}
-
-.m-Container {
-  width: 95%;
-  margin: auto;
 }

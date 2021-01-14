@@ -51,10 +51,10 @@ export default function HomeParallex() {
   return (
     <section className="home_parallex">
       <div className="home_parallex_images" ref={homeParallex}>
-        <div className="parallex__img-container parallex_IC1 m-hide">
+        <div className="parallex__img-container parallex_IC1">
           <img src={ImageLeft} alt="" />
         </div>
-        <div className="parallex__img-container parallex_IC2">
+        <div className="parallex__img-container parallex_IC2 m-hide">
           <img src={ImageCenter} alt="" />
         </div>
         <div className="parallex__img-container parallex_IC3 m-hide">
@@ -62,9 +62,7 @@ export default function HomeParallex() {
         </div>
       </div>
       <div className="home_parallex_content">
-        <div className="heading-2 heading-2--black">
-          Each Piece Tells a Story
-        </div>
+        <div className="heading-2">Each Piece Tells a Story</div>
       </div>
     </section>
   );

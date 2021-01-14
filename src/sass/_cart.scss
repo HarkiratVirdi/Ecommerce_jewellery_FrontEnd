@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   top: 0;
+  display: grid;
   left: 0;
   right: 0;
   bottom: 0;
@@ -9,5 +10,73 @@
   position: fixed;
   grid-column: grid-start / grid-end;
   z-index: 999;
+  grid-template-rows: 85vh 15vh;
   background-color: #eee;
+
+  &_container_80 {
+    display: grid;
+    overflow-y: scroll;
+    grid-row: 1;
+    align-items: center;
+    grid-template-rows: 15rem max-content;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 3vw;
+    right: 5%;
+    cursor: pointer;
+    font-size: 3rem;
+    color: black;
+  }
+
+  &__heading {
+    // align-self: center;
+    @media only screen and (max-width: $mobile-breakpoint) {
+      padding-left: 2.5rem;
+    }
+  }
+  &__container {
+    display: grid;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 3vw;
+  }
+
+  &__footer {
+    position: absolute;
+    background-color: $color-secondary;
+    bottom: 0;
+    // padding: 0vw 0 0 1vw;
+    width: 100%;
+    grid-row: 2;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 3fr 2fr;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__total {
+    @media only screen and (max-width: $mobile-breakpoint) {
+      padding: 4vw;
+    }
+  }
+
+  &__options {
+    justify-self: end;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      justify-self: center;
+    }
+  }
+
+  &__options--checkout {
+  }
 }

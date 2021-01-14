@@ -1,14 +1,23 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
+import Button from "../components/Button";
+import CartItems from "../components/CartItems";
+import { useSelector, useDispatch } from "react-redux";
 
 const Cart = ({ CartDisplay, setCartDisplay }) => {
   let cart_checkout = useRef(null);
   let cart = useRef(null);
 
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cart);
+
+  const { cartItems } = cartState;
+
+  console.log(cartItems);
   useEffect(() => {
     const runAnimation = () => {
-      console.log("animation runnings");
+      console.log(CartDisplay);
       if (CartDisplay) {
         gsap.to(cart.current, {
           duration: 0.7,
@@ -25,51 +34,38 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
     };
     runAnimation();
   }, [CartDisplay]);
-  //   useRef(() => {
-  //     if (mouseEnter) {
-  //       gsap.to(cart_checkout, {
-  //         background: "#2c2c2c !important",
-  //         color: "#fff",
-  //         duration: 1,
-  //       });
-  //     } else {
-  //       gsap.to(cart_checkout, {
-  //         background: "#fff",
-  //         color: "#2c2c2c",
-  //         duration: 1,
-  //       });
-  //     }
-  //   }, [mouseEnter]);
-
-  //   const onMouseEnter = () => {
-  //     console.log("Mouse entered checkout");
-  //     setmouseEnter(true);
-  //   };
 
   return (
     <div ref={cart} className="cart">
-      <div className="container">
-        <h1 className="cart_heading">Cart</h1>
+      <div className="cart_container_80 container-80">
+        <h1 className="cart__heading heading-3--black heading-3">Cart</h1>
         <div
           onClick={() => setCartDisplay((prev) => !prev)}
-          className={`cart_cross ${CartDisplay ? "cross_display" : ""} `}
+          className={`cart__cross ${CartDisplay ? "cross__display" : ""}`}
         >
           x
         </div>
         {/* <div className="cart_cross"><a href=""></a></div> */}
-        <div className="cart_container">
-          <div className="cart_items">{/* <CartItems /> */}</div>
+        <div className="cart__container">
+          <div className="cart__items">
+            {cartItems.map((cartItem) => {
+              return <CartItems product={cartItem} />;
+            })}
+          </div>
         </div>
       </div>
-
-      <div className="cart_footer">
-        <div className="cart_total">
-          <h3>Total/ </h3>
+      <div className="cart__footer">
+        <div className="cart__total">
+          <h3 className="heading-4 heading-4--white">Total/ </h3>
         </div>
-        <div className="cart_options">
-          <Link className="cart_options--checkout">
+        <div className="cart__options">
+          <Button linkTo="/checkout" style="btn--white">
+            Checkout
+          </Button>
+
+          {/* <Link className="cart__options--checkout">
             <label htmlFor="checkout">Checkout</label>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

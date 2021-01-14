@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import { motion } from "framer-motion";
 import { listProductDetails } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
-
+import { addToCart } from "../actions/cartActions";
 const ItemPage = ({ match }) => {
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
@@ -14,6 +14,10 @@ const ItemPage = ({ match }) => {
   useEffect(() => {
     dispatch(listProductDetails(match.params.id));
   }, []);
+
+  const addingToCart = () => {
+    dispatch(addToCart(match.params.id));
+  };
 
   return (
     <motion.div className="item_page" exit={{ opacity: 0 }}>
@@ -31,10 +35,25 @@ const ItemPage = ({ match }) => {
         <div className="heading-5 mt-s heading-5--white">
           {product.description}
         </div>
-        <div className="item_page_quantity mt-m">
+        {/* <div className="item_page_quantity mt-m">
           <div className="heading-5 heading-5--white">Quantity</div>
-        </div>
-        <Button style="btn btn--white mt-l">ADD TO CART</Button>
+          <div className="item_page_qty_sel">
+            <div className="item_page_qty_selectors">
+              <p className="item_page_qty_label">
+                (qty)
+              </p>
+              <p className="item_page_fake_sel">1</p>
+              <img src="" alt=""/>
+              <ul className="item_page_drawer">
+
+              </ul>
+            
+            </div>
+          </div>
+        </div> */}
+        <Button style="btn btn--white mt-l" onClick={addingToCart}>
+          ADD TO CART
+        </Button>
       </div>
     </motion.div>
   );
