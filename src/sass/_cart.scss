@@ -45,6 +45,7 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-column-gap: 3vw;
     grid-row-gap: 3vw;
+    justify-items: center;
 
     @media only screen and (max-width: $mobile-breakpoint) {
       grid-row-gap: 5vw;

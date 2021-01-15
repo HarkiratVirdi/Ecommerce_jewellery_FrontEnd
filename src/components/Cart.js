@@ -13,10 +13,10 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
 
   const { cartItems } = cartState;
 
-  console.log(cartItems);
+  // console.log(cartItems);
   useEffect(() => {
     const runAnimation = () => {
-      console.log(CartDisplay);
+      // console.log(CartDisplay);
       if (CartDisplay) {
         gsap.to(cart.current, {
           duration: 0.7,
@@ -47,9 +47,15 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
         {/* <div className="cart_cross"><a href=""></a></div> */}
         <div className="cart__container">
           <div className="cart__items">
-            {cartItems.map((cartItem) => {
-              return <CartItems product={cartItem} />;
-            })}
+            {cartItems.length > 0 ? (
+              cartItems.map((cartItem) => {
+                return <CartItems product={cartItem} />;
+              })
+            ) : (
+              <div className="heading-3 heading-3--black">
+                Please Add Some Items From The Shop
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -58,7 +64,7 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
           <h3 className="heading-4 heading-4--white">Total/ </h3>
         </div>
         <div className="cart__options">
-          <Button linkTo="/checkout" style="btn--white">
+          <Button linkTo="/checkout" styling="btn--white">
             Checkout
           </Button>
 

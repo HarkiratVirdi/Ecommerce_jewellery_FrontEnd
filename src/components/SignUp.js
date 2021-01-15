@@ -15,7 +15,7 @@ export default function SignUp({ image }) {
         </div>
         <form action="" className=" mt-m sign_up_form">
           <input type="email" placeholder="Email Address" />
-          <Button placement="sign_up_btn" style="btn--white">
+          <Button placement="sign_up_btn" styling="btn--white">
             Sign Up
           </Button>
         </form>

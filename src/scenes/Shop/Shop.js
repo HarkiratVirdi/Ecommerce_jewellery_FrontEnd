@@ -4,15 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { listProducts } from "../../actions/productActions";
+import { SpinnerAbsolute } from "../../components/SpinnerAbsolute";
 
 const Shop = () => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
 
   const { loading, error, products } = productList;
-
-  console.log(products);
-  console.log(productList);
 
   useEffect(() => {
     dispatch(listProducts());
@@ -21,7 +19,7 @@ const Shop = () => {
   return (
     <>
       {loading ? (
-        <h2>....Loading</h2>
+        <SpinnerAbsolute />
       ) : error ? (
         <h3>Error</h3>
       ) : (

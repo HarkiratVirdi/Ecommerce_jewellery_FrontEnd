@@ -1,0 +1,22 @@
+.login_form {
+  grid-column: 3/7;
+  grid-row: 2;
+  padding: 4.5rem;
+  display: grid;
+  background-color: $color-tertiary;
+  grid-row-gap: 3rem;
+
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: $mobile-breakpoint) {
+    grid-column: 1/-1;
+    padding: 5rem 1rem;
+  }
+}
+
+.form_field {
+  height: 3.5rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}

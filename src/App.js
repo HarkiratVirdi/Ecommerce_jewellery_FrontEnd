@@ -3,6 +3,7 @@ import Nav from "./components/Nav.js";
 import Loading from "./components/Loading";
 import Home from "./scenes/Home/Home";
 import Shop from "./scenes/Shop/Shop";
+import Login from "./scenes/Login/Login";
 import {
   HashRouter,
   Switch,
@@ -35,6 +36,7 @@ function App() {
           <Switch location={location} key={location.pathname}>
             <Route exact component={Home} path="/"></Route>
             <Route path="/shop" exact component={Shop}></Route>
+            <Route path="/login" exact component={Login}></Route>
             <Route exact path="/products/:id" component={ItemPage}></Route>
           </Switch>
         </div>

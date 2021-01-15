@@ -4,8 +4,13 @@ import Logo from "../images/tira_logo.png";
 import Cart from "./Cart";
 import Menu from "./Menu";
 import { AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const Nav = () => {
+  const cartQty = useSelector((state) => state.cart);
+
+  const { cartItems } = cartQty;
+
   const [click, setclick] = useState(false);
   const [CartDisplay, setCartDisplay] = useState(false);
   const [scroll, setscroll] = useState(false);
@@ -78,7 +83,7 @@ const Nav = () => {
             }}
             className="navbar__link"
           >
-            Cart
+            Cart({cartItems.length})
           </Link>
         </li>
       </ul>

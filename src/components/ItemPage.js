@@ -29,7 +29,7 @@ const ItemPage = ({ match }) => {
           <div className="heading-4 heading-4--white">{product.name}</div>
           <div className="mb-s ml-s heading-5 heading-5--white">{`$${product.price}`}</div>
         </div>
-        <div className="heading-5 mt-m heading-5--white">
+        <div className="heading-4 mt-m heading-4--white">
           <strong>Description</strong>
         </div>
         <div className="heading-5 mt-s heading-5--white">
