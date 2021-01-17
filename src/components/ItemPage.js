@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
 import { listProductDetails } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../actions/cartActions";
+import { SpinnerAbsolute } from "./SpinnerAbsolute";
+import Message from "./Message";
 const ItemPage = ({ match }) => {
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
@@ -13,14 +14,16 @@ const ItemPage = ({ match }) => {
 
   useEffect(() => {
     dispatch(listProductDetails(match.params.id));
-  }, []);
+  }, [dispatch, match.params.id]);
 
   const addingToCart = () => {
-    dispatch(addToCart(match.params.id));
+    dispatch(addToCart(match.params.id, 1));
   };
 
   return (
     <motion.div className="item_page" exit={{ opacity: 0 }}>
+      {loading && <SpinnerAbsolute />}
+      {error && <Message>Please refresh the Page</Message>}
       <div className="item_page__image">
         <img src={product.image} alt={product.name} />
       </div>
@@ -51,7 +54,7 @@ const ItemPage = ({ match }) => {
             </div>
           </div>
         </div> */}
-        <Button style="btn btn--white mt-l" onClick={addingToCart}>
+        <Button styling="btn btn--white mt-l" onClick={addingToCart}>
           ADD TO CART
         </Button>
       </div>

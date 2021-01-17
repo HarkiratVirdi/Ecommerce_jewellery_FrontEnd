@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../images/tira_logo.png";
 import Cart from "./Cart";
 import Menu from "./Menu";
-import { AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const Nav = () => {
@@ -14,6 +13,13 @@ const Nav = () => {
   const [click, setclick] = useState(false);
   const [CartDisplay, setCartDisplay] = useState(false);
   const [scroll, setscroll] = useState(false);
+
+  const userLogin = useSelector((state) => state.userLogin);
+
+  const { userInfo } = userLogin;
+
+  const logout = () => {};
+
   const handleClick = () => {
     setclick(!click);
   };
@@ -30,11 +36,11 @@ const Nav = () => {
         setscroll(false);
       }
     });
-  }, [handleClick]);
+  }, []);
 
   return (
     <nav className="navbar">
-      <Menu click={click} handleClick={handleClick} />
+      <Menu logout={logout} click={click} handleClick={handleClick} />
       <ul className="navbar__list">
         <li className={`navbar__item d-block ${scroll ? "s-show" : "s-show"}`}>
           <button
@@ -71,8 +77,8 @@ const Nav = () => {
         </li>
 
         <li className={`navbar__item ${scroll ? "s-hide" : "s-show"}`}>
-          <Link className="navbar__link" to="/login">
-            Login
+          <Link className="navbar__link" to={userInfo ? "/logout" : "/login"}>
+            {userInfo ? `Logout (${userInfo.name.split(" ")[0]})` : "Login"}
           </Link>
         </li>
 

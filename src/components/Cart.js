@@ -2,18 +2,21 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import Button from "../components/Button";
-import CartItems from "../components/CartItems";
 import { useSelector, useDispatch } from "react-redux";
+import { removeFromCart, addToCart } from "../actions/cartActions";
 
 const Cart = ({ CartDisplay, setCartDisplay }) => {
-  let cart_checkout = useRef(null);
   let cart = useRef(null);
 
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
 
+  const userLogin = useSelector((state) => state.userLogin);
   const { cartItems } = cartState;
 
-  // console.log(cartItems);
+  const { userInfo } = userLogin;
+
   useEffect(() => {
     const runAnimation = () => {
       // console.log(CartDisplay);
@@ -34,6 +37,10 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
     runAnimation();
   }, [CartDisplay]);
 
+  useEffect(() => {
+    console.log(quantity);
+  }, [quantity, dispatch]);
+
   return (
     <div ref={cart} className="cart">
       <div className="cart_container_80 container-80">
@@ -48,8 +55,19 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
         <div className="cart__container">
           <div className="cart__items">
             {cartItems.length > 0 ? (
-              cartItems.map((cartItem) => {
-                return <CartItems product={cartItem} />;
+              cartItems.map((cartitem) => {
+                return (
+                  <div className="cartitems">
+                    <div className="cartitems__image">
+                      <img src={cartitem.image} alt={cartitem.name} />
+                    </div>
+                    <div className="cartitems__content">
+                      <div className="cartitems__name heading-5 ">
+                        {cartitem.name} / ${cartitem.price}
+                      </div>
+                    </div>
+                  </div>
+                );
               })
             ) : (
               <div className="heading-3 heading-3--black">
@@ -61,10 +79,24 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
       </div>
       <div className="cart__footer">
         <div className="cart__total">
-          <h3 className="heading-4 heading-4--white">Total/ </h3>
+          <h3 className="heading-4 heading-4--white">
+            Total/$
+            {cartItems.length
+              ? cartItems
+                  .reduce((acc, item) => {
+                    return acc + item.qty * item.price;
+                  }, 0)
+                  .toFixed(2)
+              : "0"}
+          </h3>
         </div>
         <div className="cart__options">
-          <Button linkTo="/checkout" styling="btn--white">
+          <Button
+            linkTo={userInfo ? "/checkout" : "/login"}
+            disable={cartItems.length === 0}
+            styling="btn--white"
+            onClick={() => setCartDisplay((prev) => !prev)}
+          >
             Checkout
           </Button>
 

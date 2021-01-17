@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import { demoUser, login } from "../../actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../../components/Message";
-import Loading from "../../components/Loading";
 import Spinner from "../../components/Spinner";
 
 const Login = ({ history, location }) => {
@@ -30,7 +28,7 @@ const Login = ({ history, location }) => {
   };
 
   const SubmitDemoUser = () => {
-    setemail("admin@example.com");
+    setemail("tira@gmail.com");
     setpassword("123456");
     dispatch(demoUser(email, password));
   };
