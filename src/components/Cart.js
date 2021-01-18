@@ -38,8 +38,12 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
   }, [CartDisplay]);
 
   useEffect(() => {
-    console.log(quantity);
+    // console.log(quantity);
   }, [quantity, dispatch]);
+
+  const removeItem = (item) => {
+    dispatch(removeFromCart(item));
+  };
 
   return (
     <div ref={cart} className="cart">
@@ -65,14 +69,42 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
                       <div className="cartitems__name heading-5 ">
                         {cartitem.name} / ${cartitem.price}
                       </div>
+                      <div className="cartitems__qty">
+                        <select
+                          className="cartitems_drawer"
+                          onChange={(e) =>
+                            dispatch(
+                              addToCart(
+                                cartitem.product,
+                                Number(e.target.value)
+                              )
+                            )
+                          }
+                        >
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </div>
+                      <div
+                        className="heading-5 underline pointer"
+                        onClick={() => removeItem(cartitem.product)}
+                      >
+                        Remove
+                      </div>
                     </div>
                   </div>
                 );
               })
             ) : (
-              <div className="heading-3 heading-3--black">
-                Please Add Some Items From The Shop
-              </div>
+              <div className="heading-3 heading-3--black">Cart is Empty</div>
             )}
           </div>
         </div>
@@ -92,7 +124,7 @@ const Cart = ({ CartDisplay, setCartDisplay }) => {
         </div>
         <div className="cart__options">
           <Button
-            linkTo={userInfo ? "/checkout" : "/login"}
+            linkTo={userInfo ? "/shipping" : "/login"}
             disable={cartItems.length === 0}
             styling="btn--white"
             onClick={() => setCartDisplay((prev) => !prev)}

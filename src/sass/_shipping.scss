@@ -1,0 +1,13 @@
+.shipping {
+  grid-row: 3;
+  display: grid;
+  grid-column: 3/7;
+  background-color: $color-tertiary;
+  padding: 3rem 3rem 5rem 3rem;
+  margin-top: 2rem;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    grid-column: 1/-1;
+    padding: 1rem 1rem 4rem 1rem;
+  }
+}

@@ -15,38 +15,52 @@
   }
 
   &__name {
-    width: 75%;
+    width: 65%;
     flex-wrap: wrap;
   }
 
   &__qty {
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-items: center;
     align-items: center;
-    justify-content: flex-end;
+    // justify-content: flex-end;
   }
 
-  &__dec,
-  &__qty--number,
-  &__inc {
-    cursor: pointer;
-    width: 3rem;
-    justify-content: center;
-    display: flex;
-    border: 1px solid $color-primary;
-    text-align: center;
-    height: 3rem;
-    outline: none;
-    border: none;
-    user-select: none;
-    font-family: $font-tertiary;
-    align-items: center;
-    background-color: $color-tertiary;
+  &__qty {
+    // overflow: hidden;
+  }
 
-    @media only screen and (max-width: $mobile-breakpoint) {
-      // height: 3.5rem;
-      width: 6.5rem;
+  &_symbol {
+    transition: all 0.5s;
+  }
+
+  &_symbol_down {
+    transform: rotate(90deg);
+  }
+  &_symbol_up {
+    transform: rotate(-90deg);
+  }
+
+  &_drawer {
+    // height: 10rem;
+
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    background: $color-primary;
+    justify-content: center;
+    align-items: center;
+    // transform: translateY(4rem);
+    transition: all 0.5s;
+
+    li {
+      list-style: none;
     }
+  }
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    // height: 3.5rem;
+    width: 6.5rem;
   }
 }

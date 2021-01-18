@@ -76,7 +76,7 @@
     padding: 1.5rem 0;
 
     &:link {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       text-decoration: none;
       font-weight: 800;
       position: relative;
@@ -106,7 +106,7 @@
 
   &__logo {
     font-family: $font-primary;
-    width: 7vw;
+    width: 4vw;
     text-decoration: none;
     grid-column: 2;
     grid-row: 1;
@@ -120,7 +120,7 @@
     }
 
     @media only screen and (max-width: $mobile-breakpoint) {
-      width: 15vw;
+      width: 10vw;
     }
   }
 

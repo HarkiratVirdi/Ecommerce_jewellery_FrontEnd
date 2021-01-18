@@ -1,0 +1,23 @@
+.checkout {
+  grid-row: 2;
+  display: grid;
+  grid-column: 3/7;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    grid-column: 1/-1;
+  }
+
+  &_step {
+    display: inline-block;
+    justify-self: center;
+
+    // a {
+    //   color: $color-secondary;
+    // }
+
+    a {
+      color: #000;
+    }
+  }
+}

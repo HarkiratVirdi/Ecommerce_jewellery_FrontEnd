@@ -1,10 +1,10 @@
 .btn {
-  height: 3.5vw;
-  font-size: 1vw;
+  height: 3.5rem;
+  font-size: 1.4rem;
   outline: 0;
-  padding: 1vw 4vw;
+  padding: 1rem 3rem;
   font-family: $font-primary;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.2rem;
   font-weight: 400;
   text-decoration: none;
   color: $color-secondary;
@@ -40,14 +40,14 @@
   }
 
   @media only screen and (max-width: $mobile-breakpoint) {
-    height: 13vw;
-    font-size: 3vw;
+    height: 5rem;
+    font-size: 1.4rem;
     width: 95vw;
   }
 }
 
 .btn--white {
-  padding: 0.5vw 1.5vw;
+  padding: 0.5rem 1.5rem;
   color: $color-secondary;
   background: $color-primary;
   // &:after {
@@ -82,7 +82,7 @@
   &_email {
     background-color: transparent;
     border: 1px solid $color-primary;
-    height: 3vw;
+    height: 2rem;
     padding: 0 1vw;
     color: $color-primary;
     outline: none;

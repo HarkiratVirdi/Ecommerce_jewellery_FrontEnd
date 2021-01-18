@@ -1,17 +1,32 @@
-// .form_field {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: flex-end;
+.form {
+  &_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-//   ::placeholder {
-//     color: white;
-//   }
+    @media only screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      width: 100%;
+      //   margin-top: 3rem;
+      margin-bottom: 3rem;
+      align-items: flex-start;
+    }
+  }
 
-//   &_email {
-//     order: 2;
-//     color: $color-primary;
-//     height: 5rem;
-//     width: 100%;
-//     border: 1px solid $color-primary;
-//   }
-// }
+  &_label {
+    flex: 1;
+  }
+
+  &_input {
+    height: 3rem;
+    border: none;
+    outline: none;
+    flex: 3;
+    padding: 1rem;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+      //   margin-top: 2rem;
+    }
+  }
+}
