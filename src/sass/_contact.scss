@@ -1,0 +1,44 @@
+.contact {
+  grid-row: 2;
+  grid-column: 2/8;
+
+  .field {
+    display: flex;
+    justify-content: space-between;
+
+    textarea {
+      flex: 4;
+    }
+
+    label {
+      font-size: 2rem;
+      flex: 1;
+    }
+
+    input {
+      border: none;
+      flex: 4;
+
+      outline: none;
+      border-bottom: 1px solid $color-secondary;
+    }
+  }
+
+  &__form {
+    form {
+      * {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .radio_fields {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .radio__label {
+    color: $color-secondary;
+  }
+}

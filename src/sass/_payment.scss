@@ -9,13 +9,13 @@
     display: flex;
   }
 
-  &_radio_control {
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    border: 0.1em solid $color-secondary;
-  }
+  // &_radio_control {
+  //   display: block;
+  //   width: 1rem;
+  //   height: 1rem;
+  //   border-radius: 50%;
+  //   border: 0.1em solid $color-secondary;
+  // }
 }
 
 .radio {
@@ -50,11 +50,17 @@
     &:focus + .radio__control {
       box-shadow: 0 0 0 0.05em #fff, 0 0 0.1em 0.1em $color-primary;
     }
+    &:focus + .radio__control-gold {
+      box-shadow: 0 0 0 0.05em #fff, 0 0 0.1em 0.1em $color-primary;
+    }
   }
 }
 
 .radio-gradient input:checked + .radio__control {
   background: radial-gradient($color-primary 50%, rgba(255, 0, 0, 0));
+}
+.radio-gradient-gold input:checked + .radio__control-gold {
+  background: radial-gradient($color-tertiary 50%, rgba(167, 112, 29, 1));
 }
 
 .radio-before {
@@ -74,5 +80,13 @@
   height: 1em;
   border-radius: 50%;
   border: 0.1em solid $color-primary;
+  transform: translateY(-0.05em);
+}
+.radio__control-gold {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid $color-secondary;
   transform: translateY(-0.05em);
 }

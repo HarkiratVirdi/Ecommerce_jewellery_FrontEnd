@@ -10,6 +10,10 @@ import ItemPage from "./components/ItemPage.js";
 import { Switch, Route, useLocation } from "react-router-dom";
 import "./sass/main.scss";
 import Payment from "./scenes/Payment/Payment.js";
+import PlaceOrder from "./scenes/PlaceOrder/PlaceOrder.js";
+import Contact from "./scenes/Contact/Contact";
+import About from "./scenes/About/About.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,7 +31,6 @@ function App() {
       ) : (
         <div className="grid-container">
           <Nav />
-
           <Switch location={location} key={location.pathname}>
             <Route exact component={Home} path="/"></Route>
             <Route path="/shop" exact component={Shop}></Route>
@@ -35,6 +38,9 @@ function App() {
             <Route path="/logout" exact component={Logout}></Route>
             <Route path="/shipping" exact component={Shipping}></Route>
             <Route path="/payment" exact component={Payment}></Route>
+            <Route path="/contact" exact component={Contact}></Route>
+            <Route path="/about" exact component={About}></Route>
+            <Route path="/placeorder" exact component={PlaceOrder}></Route>
             <Route exact path="/products/:id" component={ItemPage}></Route>
           </Switch>
         </div>

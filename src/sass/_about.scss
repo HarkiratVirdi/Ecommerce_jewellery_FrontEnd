@@ -1,0 +1,65 @@
+.about {
+  grid-column: 1/-1;
+  display: flex;
+  grid-row: 2;
+  position: relative;
+  z-index: -1;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+
+  &_img_1 {
+    width: 60%;
+    height: 85vh;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  &_content {
+    width: 50%;
+    background: $color-tertiary;
+    display: flex;
+    align-self: flex-end;
+    padding: 12rem;
+    align-items: center;
+    height: 40rem;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+      padding: 3rem;
+      order: 2;
+    }
+  }
+
+  &__img-container {
+    height: 100%;
+    visibility: hidden;
+
+    width: 100%;
+    position: relative;
+    justify-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: white;
+    }
+  }
+}

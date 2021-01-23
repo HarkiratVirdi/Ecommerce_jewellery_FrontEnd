@@ -24,12 +24,16 @@
   text-decoration: underline;
 }
 
+.text-bold {
+  font-weight: 800;
+}
+
 .pointer {
   cursor: pointer;
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .s-hide {
