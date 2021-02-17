@@ -3,6 +3,7 @@ import CheckoutSteps from "../../components/CheckoutSteps";
 import { useSelector, useDispatch } from "react-redux";
 import { createOrder } from "../../actions/orderAction";
 import { Link } from "react-router-dom";
+import Message from "../../components/Message";
 
 const PlaceOrder = ({ history }) => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const PlaceOrder = ({ history }) => {
     if (!shippingAddress) {
       history.push("/shipping");
     }
-  }, [history, userInfo, shippingAddress]);
+  }, [userInfo, shippingAddress]);
 
   useEffect(() => {
     if (success) {
@@ -45,11 +46,11 @@ const PlaceOrder = ({ history }) => {
       createOrder({
         orderItems: cart.cartItems,
         shippingAddress: cart.shippingAddress,
+        paymentMethod: cart.paymentMethod,
         taxPrice: cart.taxPrice,
         shippingPrice: cart.shippingPrice,
         totalPrice: cart.totalPrice,
         itemsPrice: cart.itemsPrice,
-        paymentMethod: cart.paymentMethod,
       })
     );
   };
@@ -105,7 +106,14 @@ const PlaceOrder = ({ history }) => {
             {" "}
             <span className="text-bold">Total: </span> ${cart.totalPrice}
           </div>
-          <button className="btn btn--black">Place Order</button>
+          {error && <Message>{error}</Message>}
+          <button
+            className="btn btn--black"
+            disabled={cart.cartItems === 0}
+            onClick={placeOrderHandler}
+          >
+            Place Order
+          </button>
         </div>
       </div>
     </>

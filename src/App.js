@@ -13,7 +13,7 @@ import Payment from "./scenes/Payment/Payment.js";
 import PlaceOrder from "./scenes/PlaceOrder/PlaceOrder.js";
 import Contact from "./scenes/Contact/Contact";
 import About from "./scenes/About/About.js";
-import Footer from "./components/Footer.js";
+import OrderScreen from "./scenes/OrderScreen/OrderScreen";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3750);
+    }, 3350);
   }, [loading]);
 
   return (
@@ -41,6 +41,7 @@ function App() {
             <Route path="/contact" exact component={Contact}></Route>
             <Route path="/about" exact component={About}></Route>
             <Route path="/placeorder" exact component={PlaceOrder}></Route>
+            <Route path="/order/:id" exact component={OrderScreen}></Route>
             <Route exact path="/products/:id" component={ItemPage}></Route>
           </Switch>
         </div>
