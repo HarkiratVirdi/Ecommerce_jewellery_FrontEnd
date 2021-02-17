@@ -14,6 +14,7 @@ import PlaceOrder from "./scenes/PlaceOrder/PlaceOrder.js";
 import Contact from "./scenes/Contact/Contact";
 import About from "./scenes/About/About.js";
 import OrderScreen from "./scenes/OrderScreen/OrderScreen";
+import Register from "./scenes/Register/Register.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,8 @@ function App() {
             <Route path="/contact" exact component={Contact}></Route>
             <Route path="/about" exact component={About}></Route>
             <Route path="/placeorder" exact component={PlaceOrder}></Route>
+            <Route path="/register" component={Register} exact />
+
             <Route path="/order/:id" exact component={OrderScreen}></Route>
             <Route exact path="/products/:id" component={ItemPage}></Route>
           </Switch>
