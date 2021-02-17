@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { createOrder } from "../../actions/orderAction";
 import { Link } from "react-router-dom";
 import Message from "../../components/Message";
+import { ORDER_PAY_RESET } from "../../constants/orderConstants";
 
 const PlaceOrder = ({ history }) => {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const PlaceOrder = ({ history }) => {
   useEffect(() => {
     if (success) {
       history.push(`/order/${order._id}`);
+      dispatch({ type: ORDER_PAY_RESET });
     }
     //eslint-disable-next-line
   }, [history, success]);

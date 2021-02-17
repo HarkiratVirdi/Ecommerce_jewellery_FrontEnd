@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Loader from "../../components/Loading";
+import Loader from "../../components/SpinnerAbsolute";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { getOrderDetails, payOrder } from "../../actions/orderAction";
 import { Link } from "react-router-dom";
-import { ORDER_PAY_RESET } from "../../constants/orderConstants";
+import {
+  ORDER_CREATE_RESET,
+  ORDER_PAY_RESET,
+} from "../../constants/orderConstants";
 import Message from "../../components/Message";
 import { PayPalButton } from "react-paypal-button-v2";
 
@@ -38,6 +41,7 @@ const OrderScreen = ({ match, history }) => {
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult);
     dispatch(payOrder(orderId, paymentResult));
+    dispatch({ type: ORDER_CREATE_RESET });
   };
 
   useEffect(() => {
@@ -97,7 +101,7 @@ const OrderScreen = ({ match, history }) => {
             <hr />
             <p>
               {order.isPaid ? (
-                <Message>Paid On {order.paidAt}</Message>
+                <Message>Paid On {order.paidAt.substring(0, 10)}</Message>
               ) : (
                 <Message>Not Paid</Message>
               )}

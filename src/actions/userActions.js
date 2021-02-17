@@ -5,6 +5,12 @@ import {
   USER_LOGIN_FAIL,
   USER_LOGOUT,
 } from "../constants/userConstants";
+import {
+  ORDER_CREATE_REQUEST,
+  ORDER_CREATE_RESET,
+  ORDER_DETAILS_RESET,
+} from "../constants/orderConstants";
+import { CART_RESET } from "../constants/cartConstants";
 
 export const demoUser = (email, password) => async (dispatch) => {
   dispatch({ type: USER_LOGIN_REQUEST });
@@ -45,5 +51,13 @@ export const login = (email, password) => async (dispatch) => {
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
+  localStorage.removeItem("cartItem");
+  localStorage.removeItem("userInfo");
+  localStorage.removeItem("cartItems");
+  localStorage.removeItem("shippingAddress");
+  localStorage.removeItem("paymentMethod");
   dispatch({ type: USER_LOGOUT });
+  dispatch({ type: CART_RESET });
+  dispatch({ type: ORDER_CREATE_RESET });
+  dispatch({ type: ORDER_DETAILS_RESET });
 };

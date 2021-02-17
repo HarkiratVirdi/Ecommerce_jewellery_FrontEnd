@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ShoppingItem from "../../components/ShoppingItem";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../../actions/productActions";
-import { SpinnerAbsolute } from "../../components/SpinnerAbsolute";
+import SpinnerAbsolute from "../../components/SpinnerAbsolute";
 
 const Shop = () => {
   const dispatch = useDispatch();

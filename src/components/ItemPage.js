@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { listProductDetails } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../actions/cartActions";
-import { SpinnerAbsolute } from "./SpinnerAbsolute";
+import SpinnerAbsolute from "./SpinnerAbsolute";
 import Message from "./Message";
 const ItemPage = ({ match }) => {
   const dispatch = useDispatch();
