@@ -95,6 +95,13 @@ const OrderScreen = ({ match, history }) => {
           <div className="orderInfo_items heading-4 heading-4--black mt-m">
             Ordered Items
             <hr />
+            <p>
+              {order.isPaid ? (
+                <Message>Paid On {order.paidAt}</Message>
+              ) : (
+                <Message>Not Paid</Message>
+              )}
+            </p>
             {order.orderItems.map((item, index) => (
               <div className="items" key={index}>
                 <Link to={`/products/${item.product}`}>
@@ -114,6 +121,9 @@ const OrderScreen = ({ match, history }) => {
         <div className="orderInfo_summary heading-4 heading-4--black">
           Order Summary
           <hr />
+          <div className="heading-5">
+            <span className="text-bold">Order ID: </span> {order._id}
+          </div>
           <div className="heading-5">
             <span className="text-bold">Items: </span> ${order.itemsPrice}
           </div>

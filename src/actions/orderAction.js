@@ -94,6 +94,8 @@ export const payOrder = (orderId, paymentResult) => async (
       config
     );
 
+    console.log(data, "from order actions.js");
+
     dispatch({
       type: ORDER_PAY_SUCCESS,
       payload: data,
